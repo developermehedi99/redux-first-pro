@@ -1,26 +1,26 @@
+import { Outlet } from "react-router-dom";
 import "./App.css";
-import { decrement, increment } from "./redux/features/counter/counterSlice";
-import { RootState } from "./redux/store";
-import { useAppDespatch, useAppSelector } from "./redux/hook";
+// import { decrement, increment } from "./redux/features/counter/counterSlice";
+// import { RootState } from "./redux/store";
+// import { useAppDespatch, useAppSelector } from "./redux/hook";
+// import { Button } from "./components/ui/button";
+import Navbar from "./components/ui/navbar";
 
 function App() {
-  const dispatch = useAppDespatch();
-  const { count } = useAppSelector((state: RootState) => state.counter);
+  // const dispatch = useAppDespatch();
+  // const { count } = useAppSelector((state: RootState) => state.counter);
 
-  const handleIncrement = (amount: number) => {
-    dispatch(increment(amount));
-  };
-  const handleDecrement = () => {
-    dispatch(decrement());
-  };
+  // const handleIncrement = (amount: number) => {
+  //   dispatch(increment(amount));
+  // };
+  // const handleDecrement = () => {
+  //   dispatch(decrement());
+  // };
 
   return (
-    <div>
-      <h2>React redux projects</h2>
-      <h2>{count}</h2>
-      <button onClick={() => handleIncrement(1)}>increment</button>
-      <button onClick={() => handleIncrement(5)}>increment by 5</button>
-      <button onClick={handleDecrement}>decrement</button>
+    <div className="max-w-7xl mx-auto">
+      <Navbar></Navbar>
+      <Outlet></Outlet>
     </div>
   );
 }
