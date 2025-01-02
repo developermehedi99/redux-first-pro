@@ -16,6 +16,14 @@ const initialState: TinitialState = {
       isComplete: false,
       priority: "high",
     },
+    {
+      id: "02",
+      title: "Backend developer",
+      description: "hey bro i am front end developer and working in Upwork",
+      dueDate: "2025-02",
+      isComplete: false,
+      priority: "medium",
+    },
   ],
 };
 const taskSlice = createSlice({
