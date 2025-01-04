@@ -5,7 +5,7 @@ import { useAppSelector } from "@/redux/hook";
 
 const Takes = () => {
   const tasks = useAppSelector(selectTasks);
-  console.log(tasks);
+  // console.log(tasks);
 
   return (
     <div>
